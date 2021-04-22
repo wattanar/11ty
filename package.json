@@ -1,0 +1,27 @@
+{
+  "name": "11ty-app",
+  "version": "1.0.0",
+  "description": "11ty starter project",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run build:css & eleventy --serve",
+    "build": "npm run purge & eleventy",
+    "purge": "postcss src/_includes/css/tailwind.css -o public/css/tailwind.min.css",
+    "build:css": "tailwind build src/_includes/css/tailwind.css -o public/css//tailwind.min.css"
+  },
+  "keywords": [],
+  "author": "Wattana Ruengmucha",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "autoprefixer": "^10.2.5",
+    "clean-css": "^5.1.2",
+    "cssnano": "^5.0.1",
+    "html-minifier": "^4.0.0",
+    "postcss-cli": "^8.3.1",
+    "posthtml": "^0.15.2",
+    "posthtml-minify-classnames": "^0.2.3",
+    "tailwindcss": "^2.1.1"
+  }
+}
